@@ -1,4 +1,13 @@
 Seva::Application.routes.draw do
+  resources :static_pages
+
+  root :to => "static_pages#home"
+
+  get "path", to: 'controller#action', as: :name_of_path
+
+  
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
