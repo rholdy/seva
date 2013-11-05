@@ -4,8 +4,10 @@ Seva::Application.routes.draw do
   root :to => "static_pages#home"
 
   get "path", to: 'controller#action', as: :name_of_path
-
-  
+  get "home", to:  "static_pages#home", as: :home
+  get "about", to:  "static_pages#about", as: :about
+  get "contact", to:  "static_pages#contact", as: :contact
+  get "pricing", to: "static_pages#contact", as: :pricing
 
 
   # The priority is based upon order of creation:
