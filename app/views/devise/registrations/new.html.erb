@@ -11,9 +11,9 @@
     <%= f.input :password, :required => true %>
     <%= f.input :password_confirmation, :required => true %>
     <%= f.input :school %>
-    <%= f.input :state, collection: Carmen::Country.named("United States").subregions.map(&:name) + ["Other/Outside US"] %>
-    <%#= f.input :state, collection: [1,2,3,4] %>
-    <%= f.input :division %>
+    <%= f.input :state, collection: FormUtilities.us_states.map %>
+    <%#= f.input :state, collection: Carmen::Country.named("United States").subregions.map(&:name) + ["Other/Outside US"] %>
+    <%= f.input :division, collection: ['Division I', 'Division II', 'Division III', 'High School', 'Other/Outside US'] %>
   </div>
 
   <div class="form-actions">
