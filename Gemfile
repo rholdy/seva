@@ -11,6 +11,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'figaro'
 gem 'paperclip', "~> 3.0"
+gem 'carmen-rails'
 
 group :development do
   gem 'powder'

@@ -10,10 +10,14 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   </head>
 <body>
+  <div class= "container">
   
 <%= render 'layouts/navigation' %>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
   
 <%= yield %>
-
+ </div>
 </body>
 </html>

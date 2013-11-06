@@ -11,7 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 // Loads all Bootstrap javascripts
-//= require bootstrap
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
 //= require_tree .

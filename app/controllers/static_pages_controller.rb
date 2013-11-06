@@ -1,4 +1,11 @@
 class StaticPagesController < ApplicationController
+before_filter :authenticate_user!, only: :data
+
+def data
+
+end
+
+
   # GET /static_pages
   # GET /static_pages.json
   def index
