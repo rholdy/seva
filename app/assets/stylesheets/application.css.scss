@@ -1,20 +1,17 @@
 @import "bootstrap";
 
-body { padding-top: 70px; }
+
+body { 
+padding-top: 70px; 
+}
 
 .container {
 margin: 5px;
 min-height: 100%
-
-}
-
-html,body{
-    min-height: 100%
 }
 
 .main-body {
    min-height: 100%
-
 }
 
 .footer {
@@ -22,5 +19,8 @@ html,body{
   margin-top: -35px; 
   height: 15px;
   clear: both;
-
 } 
+
+html, body {
+    min-height: 100%
+}
