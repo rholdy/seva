@@ -4,5 +4,23 @@ body { padding-top: 70px; }
 
 .container {
 margin: 5px;
+min-height: 100%
 
 }
+
+html,body{
+    min-height: 100%
+}
+
+.main-body {
+   min-height: 100%
+
+}
+
+.footer {
+  position: relative;
+  margin-top: -35px; 
+  height: 15px;
+  clear: both;
+
+} 
