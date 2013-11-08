@@ -13,6 +13,7 @@ Seva::Application.routes.draw do
   get "contact", to:  "static_pages#contact", as: :contact
   get "pricing", to: "static_pages#pricing", as: :pricing
   get "data", to: "static_pages#data", as: :data
+  get "legal", to: "static_pages#legal", as: :legal
 
 
   
