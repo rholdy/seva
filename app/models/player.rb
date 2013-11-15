@@ -29,7 +29,7 @@ class Player < ActiveRecord::Base
         player.ppg_from_2fg = row[:ppg_from_2fg]
         player.ppg_from_3fg = row[:ppg_from_3fg]
         player.efg = row[:efg]
-        #player.esitmated_college_position = row[:estimated_college_position_estpos]
+        player.estimated_college_position = row[:estimated_college_position_estpos]
 				player.save
 			end
 		end
