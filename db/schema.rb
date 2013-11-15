@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131115021613) do
+ActiveRecord::Schema.define(:version => 20131115173716) do
 
   create_table "players", :force => true do |t|
     t.string   "name"
     t.string   "state"
-    t.string   "class"
+    t.string   "klass"
     t.integer  "year"
     t.float    "seva_score"
     t.string   "team"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(:version => 20131115021613) do
     t.string   "pricing"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "translates", :force => true do |t|
+    t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "source"
   end
 
   create_table "users", :force => true do |t|

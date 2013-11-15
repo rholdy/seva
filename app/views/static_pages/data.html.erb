@@ -1,1 +1,62 @@
-data
+<table id="players">
+    <thead>
+     <tr>
+      <td>Name</td>
+      <td>State</td>
+      <td>Class</td>
+      <td>Year</td>
+      <td>Seva Score</td>
+      <td>Team</td>
+      <td>Win%</td>
+      <td>Height</td>
+      <td>Weight</td>
+      <td>PPG</td>
+      <td>FG%</td>
+      <td>APG</td>
+      <td>BPG</td>
+      <td>RPG</td>
+      <td>SPG</td>
+      <td>College</td>
+      <td>PPG from FT</td>
+      <td>PPG from 2FG</td>
+      <td>PPG from 3fFG</td>
+      <td>EFG</td>
+      <td>Estimated College Position</td>
+      <td>Rank</td>
+     </tr>
+    </thead>
+    <tbody>
+    <% @players.each do |player| %>
+    <tr>
+      <td><%= player.name %></td>
+      <td><%= player.state %></td>
+      <td><%= player.klass %></td>
+      <td><%= player.year %></td>
+      <td><%= player.seva_score %></td>
+      <td><%= player.team %></td>
+      <td><%= player.win_percent %></td>
+      <td><%= player.height %></td>
+      <td><%= player.weight %></td>
+      <td><%= player.ppg %></td>
+      <td><%= player.fg_percent %></td>
+      <td><%= player.apg %></td>
+      <td><%= player.bpg %></td>
+      <td><%= player.rpg %></td>
+      <td><%= player.spg %></td>
+      <td><%= player.college %></td>
+      <td><%= player.ppg_from_ft %></td>
+      <td><%= player.ppg_from_2fg %></td>
+      <td><%= player.ppg_from_3fg %></td>
+      <td><%= player.efg %></td>
+      <td><%= player.estimated_college_position %></td>
+      <td><%= player.rank %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<script>
+  $('#players').dataTable({
+    "sPaginationType": "bootstrap"
+  });
+</script>

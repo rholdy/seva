@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
 before_filter :authenticate_user!, only: :data
 
 def data
-
+  @players = Player.all
 end
 
 
