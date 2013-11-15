@@ -8,6 +8,13 @@ GIT
       railties (>= 3.0)
 
 GIT
+  remote: git://github.com/rweng/jquery-datatables-rails.git
+  revision: 7d77f59c75edb5270b2a3b27a8d8ebeb2ce82d85
+  specs:
+    jquery-datatables-rails (1.11.3)
+      jquery-rails
+
+GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
   revision: 9c6c07f74ff515cf38380b014cfede14a4f0eae4
   branch: 3
@@ -56,6 +63,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
     callsite (0.0.11)
+    cancan (1.6.10)
     carmen (1.0.0)
       unicode_utils (~> 1.4.0)
     carmen-rails (1.0.0)
@@ -158,6 +166,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    rolify (3.2.0)
     sass (3.2.12)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -197,12 +206,14 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass!
+  cancan
   carmen-rails
   coffee-rails (~> 3.2.1)
   devise
   factory_girl_rails (>= 4.2.0)
   ffaker
   figaro
+  jquery-datatables-rails!
   jquery-rails
   letter_opener
   meta_request
@@ -212,6 +223,7 @@ DEPENDENCIES
   powder
   pry-rails
   rails (= 3.2.14)
+  rolify
   sass-rails (~> 3.2.3)
   simple_form
   uglifier (>= 1.0.3)

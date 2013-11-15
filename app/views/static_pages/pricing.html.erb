@@ -2,11 +2,12 @@
 
 <DIV>
   <table class= 'table'>
-    <tr>
+    <thead>
       <td>Package</td>
       <td>Price</td>
       <td>Features</td>
-    </tr>
+    </thead>
+    <tbody>
     <tr>
       <td>Bronze</td>
       <td>$50/mo</td>
@@ -22,9 +23,15 @@
       <td>$5,000/mo</td>
       <td>Access to ALL the SEVA players, and a signed photograph of BYU legend, Chris Colinsworth</td>
     </tr>
-    <tr></tr>
+    </tbody>
   </table>
 
   <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-lrg" %>
 
 </DIV>
+
+<script>
+  $('.table').dataTable({
+    "sPaginationType": "bootstrap"
+  });
+</script>

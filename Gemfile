@@ -11,6 +11,9 @@ gem 'devise'
 gem 'figaro'
 gem 'paperclip', "~> 3.0"
 gem 'carmen-rails'
+gem 'rolify'
+gem 'cancan'
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 
 group :development do
   gem 'powder'
