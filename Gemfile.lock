@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/blowmage/minitest-rails.git
-  revision: e1e1fc8d02b35b2392d05ccc73fa025d047aedbb
+  revision: f0783fb76cec69941de65e71d14b14a6a59e8be6
   specs:
     minitest-rails (0.9.2.20131029140815)
       minitest (~> 4.7)
@@ -9,9 +9,9 @@ GIT
 
 GIT
   remote: git://github.com/rweng/jquery-datatables-rails.git
-  revision: 7d77f59c75edb5270b2a3b27a8d8ebeb2ce82d85
+  revision: 9294f1ec8eceb601c5c0e36090aa18a5363dcc9f
   specs:
-    jquery-datatables-rails (1.11.3)
+    jquery-datatables-rails (1.12.0)
       jquery-rails
 
 GIT
@@ -53,7 +53,7 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     addressable (2.3.5)
-    arel (3.0.2)
+    arel (3.0.3)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
     better_errors (1.0.1)
@@ -73,7 +73,7 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.3)
       climate_control (>= 0.0.3, < 1.0)
-    coderay (1.0.9)
+    coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -82,7 +82,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     debug_inspector (0.0.2)
-    devise (3.1.1)
+    devise (3.2.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -95,7 +95,7 @@ GEM
     factory_girl_rails (4.3.0)
       factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
-    ffaker (1.20.0)
+    ffaker (1.21.0)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
@@ -106,7 +106,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    launchy (2.3.0)
+    launchy (2.4.0)
       addressable (~> 2.3)
     letter_opener (1.1.2)
       launchy (~> 2.2)
@@ -123,7 +123,7 @@ GEM
     minitest-test (1.0.0)
       minitest (~> 4.0)
     multi_json (1.8.2)
-    orm_adapter (0.4.0)
+    orm_adapter (0.5.0)
     paperclip (3.5.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -133,8 +133,8 @@ GEM
     polyglot (0.3.3)
     powder (0.2.0)
       thor (>= 0.11.5)
-    pry (0.9.12.2)
-      coderay (~> 1.0.5)
+    pry (0.9.12.3)
+      coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
     pry-rails (0.3.2)
@@ -175,7 +175,7 @@ GEM
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    slop (3.4.6)
+    slop (3.4.7)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -189,13 +189,13 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.38)
-    uglifier (2.3.0)
+    uglifier (2.3.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicode_utils (1.4.0)
     warden (1.2.3)
       rack (>= 1.0)
-    xray-rails (0.1.6)
+    xray-rails (0.1.9)
       coffee-rails
       rails (>= 3.1.0)
 
