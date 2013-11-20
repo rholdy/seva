@@ -33,6 +33,5 @@ class Player < ActiveRecord::Base
 				player.save
 			end
 		end
-	end
-   
+  end  
 end

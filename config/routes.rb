@@ -12,11 +12,13 @@ Seva::Application.routes.draw do
 
   get "home", to:  "static_pages#home", as: :home
   get "about", to:  "static_pages#about", as: :about
-  get "contact", to:  "static_pages#contact", as: :contact
+  #get "contact", to:  "static_pages#contact", as: :contact
   get "pricing", to: "static_pages#pricing", as: :pricing
   get "data", to: "static_pages#data", as: :data
   get "legal", to: "static_pages#legal", as: :legal
   get "posts", to: "posts#index", as: :posts
+  get "contact_me", to: 'contact_me#new', as: :contact_me
+  post "contact_me", to: 'contact_me#create', as: :contact_me
 
   
 

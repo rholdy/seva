@@ -1,5 +1,5 @@
 
-<h1 class= "page-title">This is my blog</h1>
+<h1 class= "page-title">This is the SEVA blog</h1>
 
 <div>
 <%= link_to 'New Post', new_post_path, :class => "btn btn-primary btn-lg" %>
@@ -8,7 +8,8 @@
     
     <div class= 'post' >
     <h3 class= 'post-title'><%= post.title %></br></h3></br>
-    <p class= 'post-body'><%= post.body %></br><p></br></br>
+    <p class= 'post-body'><%= post.body %></br></p></br></br>
+    <p class= 'post-author'>Written By:</br><%= post.author %></p>
     
     </div>
     <%= link_to 'Edit', edit_post_path(post), :class => "btn btn-warning btn-lg" %>
@@ -16,6 +17,6 @@
     
     <% end %></br></br> 
     
-<%= link_to 'New Post', new_post_path, :class => "btn btn-primary btn-lg" %>
+<%#= link_to 'New Post', new_post_path, :class => "btn btn-primary btn-lg" %>
     
 </div> 

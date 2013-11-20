@@ -1,0 +1,13 @@
+<div class= "jumbotron">
+  <h2>Contact Us</h2></br>
+  <%= simple_form_for @contact_me, url: contact_me_path do |f| %>
+  <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :subject, placeholder: "Message subject goes here" %>
+      <%= f.input :body, placeholder: "Your message goes here (make it good)", as: :text, input_html: {rows: 8} %>
+      <%= f.input :email, placeholder: "Your email goes here" %>
+      <%= f.button :submit, class: 'btn btn-primary', value: "Send" %>
+    </div>
+  <% end %>
+</div>
