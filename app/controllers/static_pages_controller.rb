@@ -2,7 +2,11 @@ class StaticPagesController < ApplicationController
 before_filter :authenticate_user!, only: :data
 
 def data
-  @players = Player.all
+  @players = Player.where(nil)
+  if params[:class].present?
+    @players = @players.where(klass: params[:class])
+  end
+  @players = @players.to_a
 end
 
 
