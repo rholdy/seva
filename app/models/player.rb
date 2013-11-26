@@ -4,11 +4,11 @@ class Player < ActiveRecord::Base
   #Call this method by running the following command and passing in a file path into the ('')
   #Player.import('')
   class << self
-		def import(path)
-			table = CSV.table(path)
-			table.each do |row|
-				player = Player.new 
-				player.rank = row[:rank_sorted_by_seva_score]
+    def import(path)
+      table = CSV.table(path)
+      table.each do |row|
+        player = Player.new 
+        player.rank = row[:rank_sorted_by_seva_score]
         player.state = row[:state]
         player.name = row[:player]
         player.klass = row[:class]
@@ -30,8 +30,8 @@ class Player < ActiveRecord::Base
         player.ppg_from_3fg = row[:ppg_from_3fg]
         player.efg = row[:efg]
         player.estimated_college_position = row[:estimated_college_position_estpos]
-				player.save
-			end
-		end
+        player.save
+      end
+    end
   end  
 end

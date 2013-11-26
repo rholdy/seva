@@ -1,10 +1,8 @@
 Seva::Application.routes.draw do
 
-  resources :posts
+  resources :posts, :charges, :static_pages
 
   devise_for :users
-
-  resources :static_pages
 
   root :to => "static_pages#home"
 

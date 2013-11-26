@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
-before_filter :authenticate_user!, only: :data
-
+before_filter :authenticate_user!, :user_has_subscription, only: :data
 def data
   @players = Player.where(nil)
   if params[:class].present?
@@ -90,5 +89,10 @@ end
       format.html { redirect_to static_pages_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+  def user_has_subscription
+    redirect_to root_url, alert: "You're not a subscriber" unless current_user.stripe_customer_id.present?
   end
 end

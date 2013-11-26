@@ -1,0 +1,13 @@
+<%= simple_form_for :plan, url: charges_path do  |f| %>
+  <%= f.input :id, as: :select, collection: [["Bronze Plan", :bronze], ["Silver Plan", :silver], ["Gold Plan", :gold]] %> 
+  <% if current_user.stripe_customer_id %>
+    <p> We already have a card on file for you.</p>
+  <% else %>
+    <div class='stripe-script'>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Bronze Plan"
+            data-amount="5000"></script>
+    </div>
+    <% end %>
+<% end %>

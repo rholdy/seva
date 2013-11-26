@@ -1,31 +1,51 @@
 <H1>Pricing</H1>
 
-<DIV>
-  <table>
-    <thead>
-      <td>Package</td>
-      <td>Price</td>
-      <td>Features</td>
-    </thead>
-    <tbody>
-    <tr>
-      <td>Bronze</td>
-      <td>$50/mo</td>
-      <td>Access to ALL the SEVA players in your State</td>
-    </tr>
-    <tr>
-      <td>Silver</td>
-      <td>$500/mo</td>
-      <td>Access to ALL the SEVA players in your Conference</td>
-    </tr>
-    <tr>
-      <td>Gold</td>
-      <td>$5,000/mo</td>
-      <td>Access to ALL the SEVA players, and a signed photograph of BYU legend, Chris Colinsworth</td>
-    </tr>
-    </tbody>
-  </table>
-
-  <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-lrg" %>
-
-</DIV>
+<div class='col-sm-4'>
+  <div class='thumbnail text-center'>
+    <h2>Bronze</h2>
+    <h4>$50/mo.</h4>
+    <p>Access to ALL the SEVA players in your State</p>
+    <%= simple_form_for :plan, url: charges_path do  |f| %>
+      <%= f.input :id, as: :hidden, input_html: {value: 'bronze'} %> 
+      <div class='stripe-script'>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="Bronze Plan"
+                data-amount="5000"></script>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class='col-sm-4'>
+  <div class='thumbnail text-center'>
+    <h2>Silver</h2>
+    <h4>$500/mo.</h4>
+    <p>Access to ALL the SEVA players in your Conference</p>
+    <%= simple_form_for :plan, url: charges_path do  |f| %>
+      <%= f.input :id, as: :hidden, input_html: {value: 'silver'} %> 
+      <div class='stripe-script'>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="Silver Plan"
+                data-amount="50000"></script>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class='col-sm-4'>
+  <div class='thumbnail text-center'>
+    <h2>Gold</h2>
+    <h4>$5,000/mo.</h4>
+    <p>Access to ALL the SEVA players, and a signed photograph of BYU legend, Chris Colinsworth</p>
+    <%= simple_form_for :plan, url: charges_path do  |f| %>
+      <%= f.input :id, as: :hidden, input_html: {value: 'gold'} %> 
+      <div class='stripe-script'>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="Gold Plan"
+                data-amount="500000"></script>
+      </div>
+    <% end %>
+  </div>
+</div>
+  
