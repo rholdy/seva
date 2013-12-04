@@ -1,7 +1,8 @@
 <table id="players">
     <thead>
      <tr>
-      <td>Name</td>
+      <td>Rank</td>
+      <td>Name </td>
       <td>State</td>
       <td>Class</td>
       <td>Year</td>
@@ -17,17 +18,12 @@
       <td>RPG</td>
       <td>SPG</td>
       <td>College</td>
-      <td>PPG from FT</td>
-      <td>PPG from 2FG</td>
-      <td>PPG from 3fFG</td>
-      <td>EFG</td>
-      <td>Estimated College Position</td>
-      <td>Rank</td>
      </tr>
     </thead>
     <tbody>
     <% @players.each do |player| %>
     <tr>
+      <td><%= player.rank %></td>
       <td><%= player.name %></td>
       <td><%= player.state %></td>
       <td><%= player.klass %></td>
@@ -44,21 +40,44 @@
       <td><%= player.rpg %></td>
       <td><%= player.spg %></td>
       <td><%= player.college %></td>
-      <td><%= player.ppg_from_ft %></td>
-      <td><%= player.ppg_from_2fg %></td>
-      <td><%= player.ppg_from_3fg %></td>
-      <td><%= player.efg %></td>
-      <td><%= player.estimated_college_position %></td>
-      <td><%= player.rank %></td>
      </tr>
     <% end %>
   </tbody>
 </table>
+<div>
+  <div class= "col-md-5">
+    <%= form_tag(data_path, method: :get) do %>
+    <%= select_tag "class", options_for_select([ " Freshman", " Sophomore", " Junior", " Senior" ], " Junior") %></br>
+    <%= submit_tag "Filter by Class" , class: "btn btn-primary" %>
+    <%end%>
 
-<%= form_tag(data_path, method: :get) do %>
-<%= select_tag "class", options_for_select([ " Freshman", " Sophomore", " Junior", " Senior" ], " Junior") %>
-<%= submit_tag %>
-<%end%>
+    <%= form_tag(data_path, method: :get) do %>
+    <%= select_tag "state", options_for_select(FormUtilities.us_states.map) %></br>
+    <%= submit_tag "Filter by State" , class: "btn btn-primary" %>
+    <%end%>
+
+    <%= form_tag(data_path, method: :get) do %>
+    <%= select_tag "score", options_for_select(0..10) %></br>
+    <%= submit_tag "Filter SEVA score" , class: "btn btn-primary" %>
+    <%end%>
+  </div>
+  <div class= "col-md-5">
+    <%= form_tag(data_path, method: :get) do %>
+    <%= select_tag "height", options_for_select(60..90) %></br>
+    <%= submit_tag "Filter by Height (in inches)" , class: "btn btn-primary"  %>
+    <%end%>
+
+    <%= form_tag(data_path, method: :get) do %>
+    <%= select_tag "ppg", options_for_select(1..50) %></br>
+    <%= submit_tag "Filter PPG" , class: "btn btn-primary" %>
+    <%end%>
+
+    <%= form_tag(data_path, method: :get) do %>
+    <%= select_tag "fg_percent", options_for_select(1..100) %></br>
+    <%= submit_tag "Filter by FG%" , class: "btn btn-primary" %>
+    <%end%>
+  </div>
+</div>
 
 <script>
   $('#players').dataTable({

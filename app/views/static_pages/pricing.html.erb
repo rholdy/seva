@@ -1,9 +1,10 @@
 <H1>Pricing</H1>
+</br>
 
 <div class='col-sm-4'>
   <div class='thumbnail text-center'>
     <h2>Bronze</h2>
-    <h4>$50/mo.</h4>
+    <h4>$50/mo.</h4></br>
     <p>Access to ALL the SEVA players in your State</p>
     <%= simple_form_for :plan, url: charges_path do  |f| %>
       <%= f.input :id, as: :hidden, input_html: {value: 'bronze'} %> 
@@ -19,7 +20,7 @@
 <div class='col-sm-4'>
   <div class='thumbnail text-center'>
     <h2>Silver</h2>
-    <h4>$500/mo.</h4>
+    <h4>$500/mo.</h4></br>
     <p>Access to ALL the SEVA players in your Conference</p>
     <%= simple_form_for :plan, url: charges_path do  |f| %>
       <%= f.input :id, as: :hidden, input_html: {value: 'silver'} %> 

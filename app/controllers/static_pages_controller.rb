@@ -5,6 +5,21 @@ def data
   if params[:class].present?
     @players = @players.where(klass: params[:class])
   end
+  if params[:state].present?
+    @players = @players.where(state: params[:state])
+  end
+  if params[:score].present?
+    @players = @players.where("seva_score >= ?", params[:score])
+  end
+  if params[:height].present?
+    @players = @players.where("height >= ?", params[:height])
+  end
+  if params[:ppg].present?
+    @players = @players.where("ppg >= ?", params[:ppg])
+  end
+  if params[:fg_percent].present?
+    @players = @players.where("fg_percent >= ?", params[:fg_percent])
+  end
   @players = @players.to_a
 end
 
