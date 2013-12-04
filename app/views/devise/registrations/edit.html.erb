@@ -16,7 +16,7 @@
     <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
     <%= f.input :school %>
     <%= f.input :state, collection: FormUtilities.us_states.map %>
-    <%= f.input :division, collection: ['Division I', 'Division II', 'Division III', 'High School', 'Other/Outside US'] %>
+    <%= f.input :division, collection: ['Division I', 'Division II', 'Division III', 'NAIA', 'JUCO', 'High School', 'Other/Outside US'] %>
   </div>
 
   <div class="form-actions">

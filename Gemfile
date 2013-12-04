@@ -16,7 +16,7 @@ gem 'cancan'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-
+gem 'turbolinks'
 
 group :development do
   gem 'powder'
