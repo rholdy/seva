@@ -24,7 +24,7 @@
     <% @players.each do |player| %>
     <tr>
       <td><%= player.rank %></td>
-      <td><%= player.name %></td>
+      <td ><%= player.name %></td>
       <td><%= player.state %></td>
       <td><%= player.klass %></td>
       <td><%= player.year %></td>
@@ -45,6 +45,8 @@
   </tbody>
 </table>
 <div>
+
+
   <div class= "col-md-5">
     <%= form_tag(data_path, method: :get) do %>
     <%= select_tag "class", options_for_select([ " Freshman", " Sophomore", " Junior", " Senior" ], " Junior") %></br>
@@ -78,6 +80,7 @@
     <%end%>
   </div>
 </div>
+
 
 <script>
   $('#players').dataTable({

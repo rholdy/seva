@@ -3,9 +3,11 @@
 *= require dataTables/jquery.dataTables.bootstrap3
 */
 
-$primary-color: #02cafc;
+$linkwhite: #ffffff;
+$sevablue: #02cafc;
+$primary-color: $sevablue;
 
-@import "bootstrap";
+@import "bootstrap_and_overrides";
 
 body { 
 padding-top: 70px; 
@@ -18,6 +20,10 @@ min-height: 100%
 
 .main-body {
    min-height: 100%
+}
+
+.navbar-inverse {
+  color: white;
 }
 
 .footer {
@@ -47,4 +53,15 @@ width: 506px;
   background-color: lightgrey;
   padding: 5px;
 }
+
+#sevablue-btn {
+  color: #ffffff;
+  background-color: #02cafc;
+
+}
+
+.navbar-inverse .brand,.navbar-inverse .nav>li>a {
+  color: #ffffff;
+  text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
 
