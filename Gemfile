@@ -14,9 +14,11 @@ gem 'carmen-rails'
 gem 'rolify'
 gem 'cancan'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
-
+gem 'rb-readline'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'turbolinks'
+gem 'will_paginate'
+gem 'ransack'
 
 group :development do
   gem 'powder'
@@ -39,7 +41,7 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem "bootstrap-sass", github: "thomas-mcdonald/bootstrap-sass", branch: '3'
+  gem "bootstrap-sass", github: "thomas-mcdonald/bootstrap-sass"
   gem 'uglifier', '>= 1.0.3'
   gem 'coffee-rails', '~> 3.2.1'
 
